@@ -10,6 +10,10 @@ namespace TestLabFreddyc
         [FunctionName("SlotFreddyTimer")]
         public void Run([TimerTrigger("0 */1 * * * *")]TimerInfo myTimer, ILogger log)
         {
+            log.LogInformation("****************Start of execution*******************");
+
+            log.LogInformation("****************Execution in Slot*******************");
+
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
 
             log.LogInformation("****************End of execution*******************");
